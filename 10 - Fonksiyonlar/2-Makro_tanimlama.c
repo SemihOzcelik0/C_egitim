@@ -13,6 +13,10 @@
 
 #define sayiMiKarakterMi(karakter) (karakter == 'k' || karakter == 'K') ? karakter : 5 //Kod çalýþmayacaktýr çünkü makrolarda giren veri tipi neyse çýkanlarda ayný olmalýdýr.
                                                                                 // 5 bastýrmak istiyorsak '5' þeklinde karaktere çevirip bastýrabiliriz.
+
+#define sayi 25 //sayi isimli elemanýn 25'e eþit olduðunu tanýmladýk.
+
+#define yazdir printf //Printf fonksiyonunun yazdir ismine atamasýný saðladýk. Bu þekilde makro kullanýmlarý da yapýlabilir.                                                            
 int main()
 {
     setlocale(LC_ALL,"Turkish"); 
@@ -26,5 +30,8 @@ int main()
     printf("Sayý mý karakter mi ? [K, S]\n");scanf(" %c", &karak);
     printf("%c\n", sayiMiKarakterMi(karak));
 
+    printf("%d\n", sayi);
+
+    yazdir("%d", sayi); //Printf yerine makro olarak tanýmladýðýmýz yazdir isimli elemaný kullandýk.
     return 0;
 }
