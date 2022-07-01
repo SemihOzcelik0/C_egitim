@@ -7,18 +7,18 @@ int main()
 
     int sayi;
 
-    printf("Bir sayı giriniz...\n");   // Pointer bir değişkenin başlangıç noktasının ram'de nerede başladığını görmemizi sağlayan bir fonksiyondur.
+    printf("Bir sayÄ± giriniz...\n");   // Pointer bir deÄŸiÅŸkenin baÅŸlangÄ±Ã§ noktasÄ±nÄ±n ram'de nerede baÅŸladÄ±ÄŸÄ±nÄ± gÃ¶rmemizi saÄŸlayan bir fonksiyondur.
     scanf("%d", &sayi);
 
-    int *sayininAdresi;     // Bir değişkene pointer olduğunu söylemek için başına * koyulur. Bu değişken artık sıradan integer gibi tamsayı değil ram adresi tutacak bir değişkendir
-    sayininAdresi = &sayi; // sayininAdresi adlı pointerı sayi isimli integer değişkenin & kullanarak adresine atadık. Artık sayininAdresi, sayi değişkeninin ramde nerede
-                          // bulunduğunu tutan bir pointer oldu.
+    int *sayininAdresi;     // Bir deÄŸiÅŸkene pointer olduÄŸunu sÃ¶ylemek iÃ§in baÅŸÄ±na * koyulur. Bu deÄŸiÅŸken artÄ±k sÄ±radan integer gibi tamsayÄ± deÄŸil ram adresi tutacak bir deÄŸiÅŸkendir
+    sayininAdresi = &sayi; // sayininAdresi adlÄ± pointerÄ± sayi isimli integer deÄŸiÅŸkenin & kullanarak adresine atadÄ±k. ArtÄ±k sayininAdresi, sayi deÄŸiÅŸkeninin ramde nerede
+                          // bulunduÄŸunu tutan bir pointer oldu.
 
-    printf("%d %x\n", *sayininAdresi, sayininAdresi); // "%d, sayininAdresi" ile sayininAdresi isimli pointerın tuttuğu adrese gidip başındaki yıldız(*) sayesinde o adresin içine
-                                        // girip içerdeki değeri yazdırmasını sağladık. %x ile sayininAdresi pointerının tuttuğu adresin neresi olduğunu yazdırdık.
+    printf("%d %x\n", *sayininAdresi, sayininAdresi); // "%d, sayininAdresi" ile sayininAdresi isimli pointerÄ±n tuttuÄŸu adrese gidip baÅŸÄ±ndaki yÄ±ldÄ±z(*) sayesinde o adresin iÃ§ine
+                                        // girip iÃ§erdeki deÄŸeri yazdÄ±rmasÄ±nÄ± saÄŸladÄ±k. %x ile sayininAdresi pointerÄ±nÄ±n tuttuÄŸu adresin neresi olduÄŸunu yazdÄ±rdÄ±k.
 
-    printf("%d %x\n\n", sayi, &sayi);   // "%d,sayi" doğrudan integer değişkenin tuttuğu tamsayıyı yazdırmamızı sağlarken, derleyiciye %x ile bir adres yazacağını, değişkenin başına
-                            // & koyarakta yazılacak değişkenin adresini belirtmesini sağladık ve sayi değişkeninin adresini görmüş olduk.
+    printf("%d %x\n\n", sayi, &sayi);   // "%d,sayi" doÄŸrudan integer deÄŸiÅŸkenin tuttuÄŸu tamsayÄ±yÄ± yazdÄ±rmamÄ±zÄ± saÄŸlarken, derleyiciye %x ile bir adres yazacaÄŸÄ±nÄ±, deÄŸiÅŸkenin baÅŸÄ±na
+                            // & koyarakta yazÄ±lacak deÄŸiÅŸkenin adresini belirtmesini saÄŸladÄ±k ve sayi deÄŸiÅŸkeninin adresini gÃ¶rmÃ¼ÅŸ olduk.
     
 
     // `````````````````````````````````````````````````````````````````` Pointer+1 ve Hexdecimal Toplama ``````````````````````````````````````````````````````````````````````````````
@@ -43,20 +43,20 @@ int main()
     printf("%.1lf    %x\n", *buyukKesirliSayiAdresi, buyukKesirliSayiAdresi);
     printf("%c       %x\n", *karakterAdresi, karakterAdresi);
 
-    printf("Double'ın adresi +1: %x\n", buyukKesirliSayiAdresi + 1); //Double değişkeninin adresine 1 eklemek bu değişken için ayrılmış alandan sonraki adres demek. Arada 8 birimlik 
-                                                                    // bir fark olmasının sebebi double'ın ramde 8byte yer kaplaması.
-    printf("Float'ın adresi +1: %x\n", kesirliSayiAdresi + 1);
-    printf("İnt'in adresi +1: %x\n", sayiAdresi + 1);
-    printf("Char'ın adresi +1: %x\n\n\n", karakterAdresi + 1);
+    printf("Double'Ä±n adresi +1: %x\n", buyukKesirliSayiAdresi + 1); //Double deÄŸiÅŸkeninin adresine 1 eklemek bu deÄŸiÅŸken iÃ§in ayrÄ±lmÄ±ÅŸ alandan sonraki adres demek. Arada 8 birimlik 
+                                                                    // bir fark olmasÄ±nÄ±n sebebi double'Ä±n ramde 8byte yer kaplamasÄ±.
+    printf("Float'Ä±n adresi +1: %x\n", kesirliSayiAdresi + 1);
+    printf("Ä°nt'in adresi +1: %x\n", sayiAdresi + 1);
+    printf("Char'Ä±n adresi +1: %x\n\n\n", karakterAdresi + 1);
 
 
     // ```````````````````````````````````````````````````````````````````````````` Dizilerde Pointer ``````````````````````````````````````````````````````````````````````````````````
 
     int sayilar[6] = {1,2,3,4,5,6};
     
-    printf("%x\n", &sayilar);    // --> sayilar dizisinin ram'de başladığı noktanın adresi
-    printf("%x\n", &sayilar[0]); // --> sayilar dizisinin 1.elemanının başladığı yani dizinin başladığı noktanın adresi
-    printf("%x\n", &sayilar[2]); // --> sayilar dizisinin 3. elemanının başladığı noktanın adresi (her elemena 4 byte yani başlangıç noktasının 8 fazlası)
+    printf("%x\n", &sayilar);    // --> sayilar dizisinin ram'de baÅŸladÄ±ÄŸÄ± noktanÄ±n adresi
+    printf("%x\n", &sayilar[0]); // --> sayilar dizisinin 1.elemanÄ±nÄ±n baÅŸladÄ±ÄŸÄ± yani dizinin baÅŸladÄ±ÄŸÄ± noktanÄ±n adresi
+    printf("%x\n", &sayilar[2]); // --> sayilar dizisinin 3. elemanÄ±nÄ±n baÅŸladÄ±ÄŸÄ± noktanÄ±n adresi (her elemena 4 byte yani baÅŸlangÄ±Ã§ noktasÄ±nÄ±n 8 fazlasÄ±)
 
     for(int i=0; i<6; i++)
     {
@@ -67,7 +67,7 @@ int main()
 
     for(int i=0; i<6; i++)
     {
-        printf("%d\n", *sayilarDiziAdres + i);
+        printf("%d ", *sayilarDiziAdres + i);
     }
 
     return 0;
